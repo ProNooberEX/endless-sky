@@ -2,9 +2,10 @@ mission "Pirates 0"
 	minor
 	name "Scan the Northies"
 	description "Fly through the <waypoints> systems scanning the ships you find there, then report to <destination> so the Southern Council of War can decide what to do."
+	clearance "When you tell the pirates you're here on behalf of Sam McCoy, they immediately let you land without question."
 	source
 		attributes "south pirate"
-		government"Pirate"
+		government "Pirate"
 		not planet "Greenrock"
 	destination "Greenrock"
 	mark "Almaaz"
@@ -36,11 +37,26 @@ mission "Pirates 0"
 			`	"Shouldn't have said that, Captain," says the pirate, throwing a knife at you. Unfortunately, it hits.`
 				die
 			label why
-   			`	"They may or may not have technology we want. Therefore, if you scan all Bactrians in the northern systems and go to <destination>, we'll give you <payment>. Do not capture them, because we are friendly with them. Thanks for doing it!"`
+   			`	"They may or may not have technology we want. Therefore, if you scan all Bactrians in the northern systems and go to <destination>, we'll give you <payment>. Do not capture them, because we are friendly with them. Tell the swabs on <planet> that Sam McCoy sent you, they'll let you land."`
 				accept
 	npc save "scan outfits"
  		government "Pirate"
    		personality staying secretive
 	 	system "Arneb"
-   		ship "Bactrian" "Scourge of the North"
-   
+   		ship "Bactrian (Hai Engines)" "Scourge of the North"
+	npc save "scan outfits"
+ 		government "Pirate"
+   		personality staying secretive
+	 	system "Alnilam"
+   		ship "Bactrian (Hai Weapons)" "Scourge of the Rim"
+	npc save "scan outfits"
+ 		government "Pirate"
+   		personality staying secretive
+	 	system "Hatysa"
+   		ship "Bactrian (Hired Gun)" "Scourge of the Core"
+	on complete
+		dialog "You land and Sam messages for you to meet him in the spaceport."
+
+mission "Pirates 1"
+	name "Northern Equipment"
+	description "Get some of the technology of the Northern Pirates and bring it to <destination> so Sam can examine it. Especially get a D94-YV Shield Generator and a Heavy Laser Turret."
