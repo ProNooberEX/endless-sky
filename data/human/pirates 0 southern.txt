@@ -58,5 +58,20 @@ mission "Pirates 0"
 		dialog "You land and Sam messages for you to meet him in the spaceport."
 
 mission "Pirates 1"
+	priority
 	name "Northern Equipment"
 	description "Get some of the technology of the Northern Pirates and bring it to <destination> so Sam can examine it. Especially get a D94-YV Shield Generator and a Heavy Laser Turret."
+	on offer
+		conversation
+			`Sam meets you at the spaceport. He says, "Before you ask questions, ANY questions, go back north and get a Heavy Laser Turret and a D94-YV Shield Generator." You try to say something, but he cuts you off.`
+			`	It doesn't look as if you're going to be able to say no.`
+				accept
+	npc
+		government "Uninhabited"
+		personality derelict launching timid
+		ship "Sparrow" "The Lost"
+	on complete
+		require "Heavy Laser Turret"
+		require "D94-YV Shield Generator"
+		outfit "Heavy Laser Turret" -1
+		outfit "D94-YV Shield Generator" -1
