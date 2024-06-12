@@ -1,0 +1,46 @@
+mission "Pirates 0"
+	minor
+	name "Scan the Northies"
+	description "Fly through the <waypoints> systems scanning the ships you find there, then report to <destination> so the Southern Council of War can decide what to do."
+	source
+		attributes "south pirate"
+		government"Pirate"
+		not planet "Greenrock"
+	destination "Greenrock"
+	mark "Almaaz"
+	mark "Alnilam"
+	mark "Arneb"
+	mark "Hatysa"
+	to offer
+		random < 60
+		has "outfit (flagship installed): Jump Drive"
+	
+	on offer
+		conversation
+			`You suddenly notice a movement to your right. On a pirate world like this, anything could happen.`
+			choice
+				`	(Duck now, ask questions later.)`
+    			goto duck
+    			`	(Confront the movement.)`
+   	 			goto heresthedeal
+				`	(Act as if nothing happened.)`
+			`	That was a mistake. A dagger comes flying out of nowhere, immediately killing you. Someone laughs as you lose conciousness.`
+   			die
+      label duck
+			`	It's a good thing you did that. A dagger goes whistling by where your head just was. You then hear someone call, "Captain! You be averse ta takin a job from the likes of us?"`
+			`	Someone appears from what seems like nowhere. "So, here's the deal," they say. "We need some alive captain to scan some ships of our northern comrades. We suspect they've got something we want. What do you say?"`
+			choice
+				`	"Tell me why, and I'll do it."`
+					goto why
+				`	"No."`
+			`	"Shouldn't have said that, Captain," says the pirate, throwing a knife at you. Unfortunately, it hits.`
+				die
+			label why
+   			`	"They may or may not have technology we want. Therefore, if you scan all Bactrians in the northern systems and go to <destination>, we'll give you <payment>. Do not capture them, because we are friendly with them. Thanks for doing it!"`
+				accept
+	npc save "scan outfits"
+ 		government "Pirate"
+   		personality staying secretive
+	 	system "Arneb"
+   		ship "Bactrian" "Scourge of the North"
+   
