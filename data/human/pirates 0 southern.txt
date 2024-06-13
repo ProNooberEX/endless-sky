@@ -1,4 +1,4 @@
-mission "Pirates 0"
+mission "Southern Pirates 0"
 	minor
 	name "Scan the Northies"
 	description "Fly through the <waypoints> systems scanning the ships you find there, then report to <destination> so the Southern Council of War can decide what to do."
@@ -15,7 +15,10 @@ mission "Pirates 0"
 	to offer
 		random < 60
 		has "outfit (flagship installed): Jump Drive"
-	
+		or
+			"reputation: Free Worlds" < 0
+			"reputation: Republic" < 0
+			"reputation: Syndicate" < 0
 	on offer
 		conversation
 			`You suddenly notice a movement to your right. On a pirate world like this, anything could happen.`
@@ -34,11 +37,22 @@ mission "Pirates 0"
 				`	"Tell me why, and I'll do it."`
 					goto why
 				`	"No."`
-			`	"Shouldn't have said that, Captain," says the pirate, throwing a knife at you. Unfortunately, it hits.`
+			`	"Shouldn't have said that, Captain," says the pirate, throwing a knife at you. Sadly, it hits.`
 				die
 			label why
    			`	"They may or may not have technology we want. Therefore, if you scan all Bactrians in the northern systems and go to <destination>, we'll give you <payment>. Do not capture them, because we are friendly with them. Tell the swabs on <planet> that Sam McCoy sent you, they'll let you land."`
 				accept
+	on accept
+		"reputation: Pirate (Southern)" >?= 0
+		log "People" "Sam McCoy" "A pirate leader who seemingly is rather important. He unfortunately loves throwing knifes, with bad consequences for the targets."
+	on visit
+		conversation
+			`Sam McCoy is not happy, and chases you off the planet.`
+				depart
+	npc
+ 		government "Pirate (Southern)"
+   		personality heroic timid nemesis
+   		ship "Raven (Afterburner)" "Paster Blaster"
 	npc save "scan outfits"
  		government "Pirate"
    		personality staying secretive
@@ -54,20 +68,26 @@ mission "Pirates 0"
    		personality staying secretive
 	 	system "Hatysa"
    		ship "Bactrian (Hired Gun)" "Scourge of the Core"
+	on fail
+		"reputation: Pirate (Southern)" <?= -10000
+		dialog "You destroyed one of the Bactrians you were supposed to scan. Sam won't be happy about this..."
 	on complete
 		dialog "You land and Sam messages for you to meet him in the spaceport."
 
-mission "Pirates 1"
+
+mission "Southern Pirates 1"
 	priority
 	name "Northern Equipment"
 	description "Get some of the technology of the Northern Pirates and bring it to <destination> so Sam can examine it. Especially get a D94-YV Shield Generator and a Heavy Laser Turret."
+	to offer
+		has "Southern Pirates 0: done"
 	on offer
 		conversation
 			`Sam meets you at the spaceport. He says, "Before you ask questions, ANY questions, go back north and get a Heavy Laser Turret and a D94-YV Shield Generator." You try to say something, but he cuts you off.`
 			`	It doesn't look as if you're going to be able to say no.`
 				accept
 	npc
-		government "Uninhabited"
+		government "Pirate (Southern)"
 		personality derelict launching timid
 		ship "Sparrow" "The Lost"
 	on complete
@@ -75,3 +95,5 @@ mission "Pirates 1"
 		require "D94-YV Shield Generator"
 		outfit "Heavy Laser Turret" -1
 		outfit "D94-YV Shield Generator" -1
+		conversation
+			`Sam seems very pleased with this new technology. "While not normally a thankful man, I'm glad you brought this, <first>. I pity the poor-another story. See you later!" He promptly leaves, and you wonder what that was all about.`
