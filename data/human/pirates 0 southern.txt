@@ -28,10 +28,10 @@ mission "Southern Pirates 0"
 				`	(Confront the movement.)`
    	 				goto heresthedeal
 				`	(Act as if nothing happened.)`
-			`	That was a mistake. A dagger comes flying out of nowhere, immediately killing you. Someone laughs as you lose conciousness.`
+			`	That was a mistake. A dagger comes flying out of nowhere, immediately killing you. Someone laughs as you lose consciousness.`
 				die
 			label duck
-			`	It's a good thing you did that. A dagger goes whistling by where your head just was. You then hear someone call, "Captain! You be averse ta takin a job from the likes of us?"`
+			`	It's a good thing you did that. A dagger goes whistling by where your head just was. You then hear someone call, "Captain! You be averse ta taking a job from the likes of us?"`
 			label heresthedeal
 			`	Someone appears from what seems like nowhere. "So, here's the deal," they say. "We need some alive captain to scan some ships of our northern comrades. We suspect they've got something we want. What do you say?"`
 			choice
