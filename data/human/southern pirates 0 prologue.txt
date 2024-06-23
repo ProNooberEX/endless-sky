@@ -56,14 +56,14 @@ mission "Southern Pirates 0"
 			`	"Shouldn't have said that, Captain," says the pirate, throwing a knife at you. Sadly, it hits.`
 				die
 			label why
-			`	"They may or may not have technology we want. Therefore, if you scan all Bactrians in the northern systems and go to <destination>, we'll give you <payment>. Do not capture them, because we are friendly with them. Tell the swabs on <planet> that Sam McCoy sent you, they'll let you land."`
+			`	"They may or may not have technology we want. Therefore, if you scan all Bactrians in the northern systems and go to <destination>, we'll give you <payment>. Do not capture or hurt them, because we are friendly with them. Tell the swabs on <planet> that Sam McCoy sent you, and they'll let you land. Though if they don't, tell me, and I'll deal with them," he says ominously. Apparently Sam McCoy is his name.`
 				accept
 	on accept
 		"reputation: Pirate (Southern)" >?= 0
-		log "People" "Sam McCoy" "A pirate leader who seemingly is rather important. He unfortunately loves throwing knives, with bad consequences for the targets."
+		log "People" "Sam McCoy" "A pirate leader who seemingly is rather important. He seems to love throwing knives, apparently with bad consequences for his targets."
 	on visit
 		conversation
-			`Sam McCoy is seemingly not happy, and chases you off the planet while shouting "Scan them before returning again!"`
+			`Sam McCoy is seemingly not happy, and sends armadas to chase you off the planet while shouting through microphones, "Scan the Bactrians before returning again! No landing until you do!"`
 				launch
 	npc
 		government "Pirate (Southern)"
