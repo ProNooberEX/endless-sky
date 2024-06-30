@@ -11,6 +11,55 @@
 # You should have received a copy of the GNU General Public License along with
 # this program. If not, see <https://www.gnu.org/licenses/>.
 
+fleet "Raiding Fleet"
+	government "Pirate"
+	names "pirate"
+	cargo 0
+	commodities "Food" "Clothing" "Metal" "Plastic" "Medical" "Heavy Metals"
+	outfitters "Southern Pirate Loot"
+	personality
+		disables heroic plunders
+	variant
+		"Leviathan" 10
+		"Falcon" 7
+		"Roost" 7
+		"Finch" 14
+		"Barb" 14
+		"Leviathan (Plasma)" 10
+		"Falcon (Flamethrower)" 7
+		"Falcon (Plasma)" 6
+		"Roost (Sidewinder)" 3
+		"Finch (Flames)" 6
+		"Barb (Proton)" 6
+
+fleet "Scan Fleet"
+	government "Pirate"
+	names "pirate"
+	cargo 1
+	outfitters "Northern Scan Pirate Outfits"
+	commodities "Food" "Clothing" "Metal" "Plastic" "Medical" "Heavy Metals"
+	variant
+		"Leviathan" 2
+		"Falcon" 3
+		"Roost" 2
+		"Barb" 4
+		"Finch" 4
+
+fleet "Storming Fleet"
+	government "Pirate"
+	names "pirate"
+	cargo 0
+	commodities "Food" "Clothing" "Metal" "Plastic" "Medical" "Heavy Metals"
+	outfitters "Southern Pirate Loot"
+	personality
+		disables heroic plunders
+	variant
+		"Leviathan" 15
+		"Falcon" 15
+		"Roost" 10
+		"Barb" 20
+		"Finch" 20
+
 fleet "Small Southern Merchants"
 	government "Merchant"
 	names "civilian"

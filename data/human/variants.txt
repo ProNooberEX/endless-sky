@@ -239,6 +239,38 @@ ship "Auxiliary" "Auxiliary (Jump Transport)"
 
 
 
+ship "Bactrian" "Bactrian (Quarg Technology)"
+	outfits
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 90
+		"Meteor Missile Launcher"
+		"Meteor Missile" 45
+		"Quarg Skylance" 2
+		"Quarg Anti-Missile" 2
+		
+		"Fusion Reactor"
+		"LP144a Battery Pack"
+		"D94-YV Shield Generator"
+		"Large Radar Jammer"
+		"Ramscoop"
+		"Laser Rifle" 250
+		"Nerve Gas" 50
+		
+		"X4700 Ion Thruster"
+		"X5200 Ion Steering"
+		"Hyperdrive"
+	gun
+	gun "Meteor Missile Launcher"
+	gun "Sidewinder Missile Launcher"
+	gun "Sidewinder Missile Launcher"
+	turret "Quarg Anti-Missile"
+	turret "Quarg Skylance"
+	turret
+	turret
+	turret "Quarg Skylance"
+	turret "Quarg Anti-Missile"
+
+
 ship "Bactrian" "Bactrian (Hai Engines)"
 	outfits
 		"Sidewinder Missile Launcher" 2
@@ -1595,6 +1627,7 @@ ship "Falcon" "Falcon (Prisoner Transport)"
 		"Hyperdrive"
 		"Brig"
 
+
 ship "Falcon" "Falcon (Laser)"
 	outfits
 		"Heavy Laser" 4
@@ -1625,6 +1658,7 @@ ship "Falcon" "Falcon (Plasma)"
 		"Impala Plasma Steering"
 		"Hyperdrive"
 
+
 ship "Falcon" "Falcon (Laser Chaser)"
 	outfits
 		"Outfits Expansion" 2
@@ -1640,6 +1674,7 @@ ship "Falcon" "Falcon (Laser Chaser)"
 		"LP036a Battery Pack"
 		"Heavy Laser" 4
 		"Armageddon Core"
+
 
 ship "Falcon" "Falcon (Tractor Beam)"
 	outfits
@@ -1663,6 +1698,22 @@ ship "Falcon" "Falcon (Tractor Beam)"
 	turret "Tractor Beam"
 	turret "Quad Blaster Turret"
 	turret "Quad Blaster Turret"
+
+
+ship "Falcon" "Falcon (Flamethrower)"
+	outfits
+		"Flamethrower" 4
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+		"D67-TM Shield Generator" 2
+	turret "Heavy Anti-Missile Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Quad Blaster Turret"
+	turret "Quad Blaster Turret"
+
 
 ship "Falcon" "Falcon (Javelin)"
 	outfits
@@ -1691,6 +1742,16 @@ ship "Falcon" "Falcon (Javelin)"
 	turret "Heavy Anti-Missile Turret"
 	turret "Javelin Turret"
 	turret "Javelin Turret"
+
+
+
+ship "Finch" "Finch (Flames)"
+	outfits
+		"X1050 Ion Engines"
+		"Flamethrower" 2
+		"Fuel Pod" 5
+		"nGVF-BB Fuel Cell"
+		"Supercapacitor"
 
 
 
@@ -2514,7 +2575,20 @@ ship "Leviathan" "Leviathan (Laser)"
 	turret "Heavy Laser Turret"
 	turret "Heavy Anti-Missile Turret"
 	turret "Heavy Laser Turret"
-	
+
+
+ship "Leviathan" "Leviathan (Plasma)"
+	outfits
+		"Impala Plasma Steering"
+		"Impala Plasma Thruster"
+		"Breeder Reactor"
+		"Plasma Turret" 4
+		"Hyperdrive"
+		"Liquid Nitrogen Cooler"
+		"Laser Rifle" 25
+		"Nerve Gas" 10
+		"D67-TM Shield Generator" 2
+
 
 ship "Leviathan" "Leviathan (Plasma Repeater)"
 	outfits
