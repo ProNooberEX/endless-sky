@@ -1107,7 +1107,6 @@ government "Pirate (Southern)"
 	"display name" "Pirate"
 	swizzle 6
 	color "governments: Pirate"
-
 	"player reputation" -1
 	"attitude toward"
 		"Author" -.01

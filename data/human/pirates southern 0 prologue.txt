@@ -60,7 +60,7 @@ mission "Southern Pirates 0"
 				accept
 	on accept
 		"reputation: Pirate (Southern)" >?= 0
-		log "People" "Sam McCoy" "A pirate leader who seemingly is rather important. He seems to love throwing knives, apparently with bad consequences for his targets."
+		log "People" "Sam McCoy" `A pirate leader who seemingly is rather important. He seems to love throwing knives, apparently with bad consequences for his targets.`
 	on visit
 		conversation
 			`Sam McCoy is seemingly not happy, and sends armadas to chase you off the planet while shouting through microphones, "Scan the Bactrians before returning again! No landing until you do!"`
