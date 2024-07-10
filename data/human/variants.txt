@@ -1715,7 +1715,6 @@ ship "Falcon" "Falcon (Flamethrower)"
 	turret "Quad Blaster Turret"
 
 
-=======
 ship "Falcon" "Falcon (Javelin)"
 	outfits
 		"Twin Blaster" 4
